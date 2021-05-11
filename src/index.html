@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The BURN TOKEN initiative</title>
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    
+    
+</head>
+<body>
+    <h1>The BURN TOKEN initiative</h1>
+
+    <div id="loader"><p class="text-center">Loading...</p></div>
+    <div id="content" style="display: none;">
+        <p>Burn token price: <span class="token-price"></span> Ether. You have <span class="burn-balance"></span> Burn token.</p>
+        <form role="form" onSubmit="App.buyTokens(); return false;">
+            <div class="form-group">
+                <div class="input-group">
+                    <input type="number" id="numberOfTokens" name="number" value="1" min="1" pattern="[0-9]"></input>
+                </div>
+                <span class="input-group-btn">
+                    <button type="submit" class="btn"></button>
+                </span>
+            </div>
+        </form>
+
+        <div class="progress">
+            <div id="progress" class="progress-bar active" aria-valuemin="0" aria-valuemax="100"></div>
+        </div>
+
+        <p><span class="tokens-sold"></span> / <span class="tokens-available"></span> Burn tokens sold</p>
+
+        <hr>
+        <p id="accountAddress"></p>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <script src="js/web3.min.js"></script>
+    <script src="js/truffle-contract.min.js"></script>
+    <script src="js/app.js"></script>
+
+</body>
+</html>
